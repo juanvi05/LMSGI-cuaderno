@@ -152,3 +152,9 @@ Por lo tanto, un archivo XML completo quedaría tal que así:
     </cancion>
 </root>
 ```
+## Documentos XML, estructura
+- Prólogo
+Se trata de la primera línea de código la cual usaremos para definir cierta información sobre el fichero XML (es opcional) como, la versión, el encoding y la validación:
+```
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+```

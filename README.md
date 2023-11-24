@@ -417,8 +417,19 @@ Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo 
 
 - __Comentarios__
   
-Tienen la misma función que en cualquier otro código: organizar y entender el contenido:
+En XML Schema, podemos incluir comentarios mediante el uso de la anotación `xs:annotation`. La anotación permite agregar información adicional y comentarios al esquema sin afectar su interpretación. Podemos utilizar `xs:documentation` dentro de `xs:annotation` para agregar comentarios descriptivos. Aquí hay un ejemplo:
 ```xml
-<!-- Esto es un comentario, lo de abajo, un elemnto -->
-<xs:element name="xd" type="string=></element>
+ <xs:simpleType name="CodigoProducto">
+    <xs:annotation>
+      <xs:documentation>
+        El tipo de dato CodigoProducto representa un código compuesto por tres letras mayúsculas
+        seguidas de dos dígitos. La longitud total del código debe ser exactamente cinco caracteres.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}[0-9]{2}"/>
+      <xs:minLength value="5"/>
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
 ```

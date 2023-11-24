@@ -186,4 +186,36 @@ Son un mecanismo de organización y evitan conflictos de nombres de otras fuente
 ```
 
 - Entidades
-Al usar ciertos caracteres especiales, podemos crear conflictos en XML ya que estas pueden ser interpretadas como parte del código, para ello usaremos las entidades, que son una manera de representar estos caracteres para que no 
+Al usar ciertos caracteres especiales, podemos crear conflictos en XML ya que estas pueden ser interpretadas como parte del código, para ello usaremos las entidades, que son una manera de representar estos caracteres para que sean representados como lo que son, en texto. Unos ejemplos son:
+```
+&lt;: Representa el carácter <.
+&gt;: Representa el carácter >.
+&amp;: Representa el carácter &.
+&quot;: Representa el carácter ".
+&apos;: Representa el carácter '.
+```
+
+- CDATA
+En un espacio CDATA, todo lo que esté dentro de este será interpretado como texto plano, es decir, no entrará dentro de las reglas de XML:
+```xml
+<![CDATA[
+   Contenido de la sección CDATA, que puede incluir <caracteres especiales> y etiquetas XML sin problemas.
+]]>
+```
+
+## Validacióin de documentos
+### DTD
+- Entidades
+Puede que a lo largo de la creación del documento tengamos que repetir las mismas palabras y expresiones y para ello haremos uso de las entidades en DTD, en las cuales asociaremos frases o palabras a ciertas expresiones, de esta manera ahorraremos tiempo y espacio:
+```xml
+<!ENTITY saludo "¡Hola, mundo!">
+```
+Lo usamos:
+```xml
+<texto>&saludo;</texto>
+```
+Y mostrará esto:
+```xml
+<texto>¡Hola, mundo!</texto>
+```
+

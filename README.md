@@ -185,3 +185,5 @@ Son un mecanismo de organización y evitan conflictos de nombres de otras fuente
 </root>
 ```
 
+- Entidades
+Al usar ciertos caracteres especiales, podemos crear conflictos en XML ya que estas pueden ser interpretadas como parte del código, para ello usaremos las entidades, que son una manera de representar estos caracteres para que no 

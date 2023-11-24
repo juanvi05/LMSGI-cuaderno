@@ -132,7 +132,7 @@ Los atributos son valores que se encuentran dentro de las etiquetas. Se usan par
 - Ejemplos en XML
 
 Por lo tanto, un archivo XML completo quedaría tal que así:
-```ruby
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <cancion id="1" genero="alternativo">

@@ -366,14 +366,14 @@ Se deben introducir dentro de los elementos complejos. Los atributos tienen nomb
 - Restricciones
 Hemos hablado mucho sobre las restricciones, y bien, no creo que haga muchafalta explicar lo que son. Las usaremos para definir las reglas que seguirá el contenido que vamos a escribir en el XML. Hay muchos tipos de restricciones algunas de ellas son:
 
-Restricción de Tipo (xs:simpleType)
-Restricción de Longitud (xs:length, xs:minLength, xs:maxLength)
-Restricción de Patrón (xs:pattern)
-Restricción de Valor Mínimo y Máximo (xs:minInclusive, xs:maxInclusive, xs:minExclusive, xs:maxExclusive)
-Restricción de Enumeración (xs:enumeration)
-Restricción de Fracción de Dígitos (xs:fractionDigits, xs:totalDigits)
-Restricción de Elección (xs:choice)
-Restricción de Secuencia (xs:sequence)
+* Restricción de Tipo (xs:simpleType)
+* Restricción de Longitud (xs:length, xs:minLength, xs:maxLength)
+* Restricción de Patrón (xs:pattern)
+* Restricción de Valor Mínimo y Máximo (xs:minInclusive, xs:maxInclusive, xs:minExclusive, xs:maxExclusive)
+* Restricción de Enumeración (xs:enumeration)
+* Restricción de Fracción de Dígitos (xs:fractionDigits, xs:totalDigits)
+* Restricción de Elección (xs:choice)
+* Restricción de Secuencia (xs:sequence)
 
 Las podemos aplicar tanto a atributos como a elementos simples y podemos poner varias restricciones dentro de una etiqueta de restricción. Un ejemplo de su uso sería el siguiente:
 ```xml
@@ -388,13 +388,13 @@ Las podemos aplicar tanto a atributos como a elementos simples y podemos poner v
 
 - Tipos de datos
 Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo haremos poniento `type=""` dentro de la etiqueta del elemento o bien poniendo `base=""` en la etiqueta de restricción. Alguno de estos tipos de datos (los más comunes) son:
-xs:string --> cadena de caracteres
-xs:integer --> Números enteros.
-xs:decimal --> Números decimales; usando “.” como separador.
-xs:boolean --> Booleano. “true” para verdadero y “false” para lo contrario.
-xs:date --> fecha con formato AAAA-MM-DD
-xs:time --> hora con formato hh:mm:ss
-xs:duration --> duración de tiempo en formato “PnYnMnDTnHnMnS”.
+* xs:string --> cadena de caracteres
+* xs:integer --> Números enteros.
+* xs:decimal --> Números decimales; usando “.” como separador.
+* xs:boolean --> Booleano. “true” para verdadero y “false” para lo contrario.
+* xs:date --> fecha con formato AAAA-MM-DD
+* xs:time --> hora con formato hh:mm:ss
+* xs:duration --> duración de tiempo en formato “PnYnMnDTnHnMnS”.
 
 - Comentarios
 Tienen la misma función que en cualquier otro código: organizar y entender el contenido:

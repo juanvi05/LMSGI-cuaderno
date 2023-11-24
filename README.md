@@ -387,4 +387,18 @@ Las podemos aplicar tanto a atributos como a elementos simples y podemos poner v
 ```
 
 - Tipos de datos
-Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo haremos poniento `type=""`
+Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo haremos poniento `type=""` dentro de la etiqueta del elemento o bien poniendo `base=""` en la etiqueta de restricción. Alguno de estos tipos de datos (los más comunes) son:
+xs:string --> cadena de caracteres
+xs:integer --> Números enteros.
+xs:decimal --> Números decimales; usando “.” como separador.
+xs:boolean --> Booleano. “true” para verdadero y “false” para lo contrario.
+xs:date --> fecha con formato AAAA-MM-DD
+xs:time --> hora con formato hh:mm:ss
+xs:duration --> duración de tiempo en formato “PnYnMnDTnHnMnS”.
+
+- Comentarios
+Tienen la misma función que en cualquier otro código: organizar y entender el contenido:
+```xml
+<!-- Esto es un comentario, lo de abajo, un elemnto -->
+<xs:element name="xd" type="string=></element>
+```

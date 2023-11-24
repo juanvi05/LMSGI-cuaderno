@@ -235,3 +235,16 @@ Son comentarios. Los usaremos para organizar y aclarar el contenido en el DTD:
 ```
 
 - Elementos
+En DTD definiremos los elementos que habrán en el XML, lo que contendrán y el tipo de dato que almacenarán. Lo haremos con la etiqueta `<!ELEMENT>` seguido del nombre del elemento y, dependiendo de si tiene información, que la pondremos con `(#PCDATA)`, o si tiene elementos, que pondremos los elementos que tiene entre paréntesis:
+```xml
+<!ELEMENT sitio (latitud,longitud,nombre,descripcion,localidad)>
+<!ELEMENT latitud (#PCDATA)>
+```
+
+- Atributos
+Definiremos los atributos con una etiqueta `<!ATTLIST>` seguido del nombre del elemento, después el nobre del atributo y luego el tipo de datos. En el tipo de datos podemos restringirlo a ciertos valores:
+```xml
+ <!ATTLIST persona genero (masculino|femenino)>
+ <!ATTLIST libro idioma CDATA>
+```
+

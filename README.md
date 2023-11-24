@@ -248,3 +248,39 @@ Definiremos los atributos con una etiqueta `<!ATTLIST>` seguido del nombre del e
  <!ATTLIST libro idioma CDATA>
 ```
 
+### XMLSchema
+- Definición
+Es un lenguaje de validación de XML más flexible que DTD. Con él tendremos más control sobre el tipo de datos pudiendo ser más precisos a la hora de definirlos, pero a cambio es más complicado de leer, entender y escribir. Un pequeño ejemplo sería esto:
+```xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="libro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autor" type="xs:string"/>
+        <xs:element name="año" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+```
+
+- Estructura básica
+Debemos tener un espacio de nombres, como `xmlns:xs="http://www.w3.org/2001/XMLSchema` y los elementos. Dentro de los elementos tendremos información u otros elementos, y aparte los atributos (van dentro de la etiqueta del elemento). También podemos crear restricciones:
+```xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="libro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autor" type="xs:string"/>
+        <xs:element name="año" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+
+- Elementos Locales y Globales

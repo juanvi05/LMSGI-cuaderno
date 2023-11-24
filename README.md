@@ -170,3 +170,18 @@ Los atributos proporcionan información adicional sobre un elemento. Son complet
 ```xml
 <elemento atributo="valor">Hola</elemento>
 ```
+
+- Comentarios
+Son partes del código que son ignoradas por el intérprete de xml. Se usan principalmente para una mejor comprensión del código y hacer ciertas aclaraciones para las personas que lo estén leyendo. Se colocan de manera que inicien con una etiqueta <, una exclamación, dos líneas diagonales, el contenido, dos líneas diagonales, y cierre con una etiqueta >, de la siguiente manera
+```xml
+<!-- Esto es un comentario en XML -->
+```
+
+- Espacios de nombres
+Son un mecanismo de organización y evitan conflictos de nombres de otras fuentes. Se usan para documentos XML más complejos que funcionen con distintos estándares y distintas fuentes. Cuando definimos un espacio de nombres en una etiqueta, sus hijos lo heredarán. También podemos asignarle un prefijo al espacio de nombres Para una mayor organización. Se dfinen con `xmlns` dentro de una etiqueta y en caso de que queramos usar un prefijo lo hariamos poniendo dos puntos y el prefijo: `xmlns:ns`. Aqui dejo un ejemplo de uso de espacios de nombres:
+```xml
+<root xmlns:ns="http://www.ejemplo.com/namespace">
+   <ns:elemento>Contenido del elemento</ns:elemento>
+</root>
+```
+

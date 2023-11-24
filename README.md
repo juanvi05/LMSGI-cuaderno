@@ -219,3 +219,19 @@ Y mostrará esto:
 <texto>¡Hola, mundo!</texto>
 ```
 
+- Anotaciones
+Son comentarios. Los usaremos para organizar y aclarar el contenido en el DTD:
+```xml
+<!-- Definición del DTD para un libro -->
+
+<!ELEMENT libro (titulo, autor, editorial, año)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+
+<!-- Atributos adicionales para el elemento libro -->
+<!ATTLIST libro idioma CDATA #IMPLIED>
+```
+
+- Elementos

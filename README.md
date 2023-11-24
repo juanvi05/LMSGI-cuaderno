@@ -284,3 +284,107 @@ Debemos tener un espacio de nombres, como `xmlns:xs="http://www.w3.org/2001/XMLS
 ```
 
 - Elementos Locales y Globales
+Los elementos locales se tratan de elementos que están encapsulados dentro de otros, es recomendable usarlos cuando no se van a referenciar mucho en el XML ya que no se pueden usar fuera del contexto en el que está en el esquema:
+```xml
+<xs:element name="persona">
+  <xs:complexType>
+    <xs:sequence>
+      <!-- Elemento local 'nombre' -->
+      <xs:element name="nombre" type="xs:string"/>
+      <!-- Elemento local 'edad' -->
+      <xs:element name="edad" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
+Los globales son representados fuera de otro elemento y podrán ser referenciados en cualquier momento en el documento XML, dando igual el contexto
+```xml
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="edad" type="xs:integer"/>
+```
+
+- Elementos simples
+Un elemento simple puede contener contenido directamente, en este podremos hacer restricciones de contenido pero no podremos meter más elementos o atributos, para ello usaremos un elemento complejo:
+```xml
+<xs:element name="puntuacion">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
+
+- Elementos complejos y subelementos
+No pueden contener información directamente, si no que contendrán más elementos. Aquí podremos definir atributos. Se usan para anidar otros elementos que pueden ser simples o también otros complejos, estos son los subelementos. Se tratan de los elementos dentro de los complejos. Dentro de un elemento complejo podemos tener varios subelementos:
+```xml
+<xs:element name="biblioteca">
+  <xs:complexType>
+    <xs:sequence>
+      <!-- Subelemento 1 -->
+      <xs:element name="libro">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="autor" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- Subelemento 2 -->
+      <xs:element name="revista">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="editor" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
+
+- Atributos
+Se deben introducir dentro de los elementos complejos. Los atributos tienen nombre y pueden tener otros valores dentro de la etiqueta, como un valor por defecto, su obligatoriedad o tipo de dato. A parte, podemos crear restricciones como en los elementos:
+```xml
+<xs:element name="coche">
+  <xs:complexType>
+    <xs:attribute name="color">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="rojo" />
+          <xs:enumeration value="verde" />
+          <xs:enumeration value="azul" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:element>
+```
+
+- Restricciones
+Hemos hablado mucho sobre las restricciones, y bien, no creo que haga muchafalta explicar lo que son. Las usaremos para definir las reglas que seguirá el contenido que vamos a escribir en el XML. Hay muchos tipos de restricciones algunas de ellas son:
+
+Restricción de Tipo (xs:simpleType)
+Restricción de Longitud (xs:length, xs:minLength, xs:maxLength)
+Restricción de Patrón (xs:pattern)
+Restricción de Valor Mínimo y Máximo (xs:minInclusive, xs:maxInclusive, xs:minExclusive, xs:maxExclusive)
+Restricción de Enumeración (xs:enumeration)
+Restricción de Fracción de Dígitos (xs:fractionDigits, xs:totalDigits)
+Restricción de Elección (xs:choice)
+Restricción de Secuencia (xs:sequence)
+
+Las podemos aplicar tanto a atributos como a elementos simples y podemos poner varias restricciones dentro de una etiqueta de restricción. Un ejemplo de su uso sería el siguiente:
+```xml
+ <xs:simpleType name="CodigoProducto">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}[0-9]{2}"/>
+      <xs:minLength value="5"/>
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+```
+
+- Tipos de datos
+Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo haremos poniento `type=""`

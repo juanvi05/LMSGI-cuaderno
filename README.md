@@ -158,3 +158,15 @@ Se trata de la primera línea de código la cual usaremos para definir cierta in
 ```
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 ```
+
+- Elementos
+Son los bloques fundamentales de un documento XML, forman parte de su cuerpo y dentro de ellos podemos encontrar o información o bien otros elementos. Se estructuran de forma que hay una etiqueta de apertura, contenido y una etiqueta de cierre, aunque también podemos encontrar atributos en ellos:
+```
+<elemento>Hola</elemento>
+```
+
+- Atributos
+Los atributos proporcionan información adicional sobre un elemento. Son completamente opcionales aunque, a veces, nos resulta muy convenientes usarlos. Se colocan dentro de la etiqueta de apertura de un elemento y se forman de esta manera `nombre="valor"`. Aqui dejo un ejemplo
+```xml
+<elemento atributo="valor">Hola</elemento>
+```

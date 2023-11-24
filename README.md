@@ -154,30 +154,35 @@ Por lo tanto, un archivo XML completo quedaría tal que así:
 ```
 ## Documentos XML, estructura
 - Prólogo
+  
 Se trata de la primera línea de código la cual usaremos para definir cierta información sobre el fichero XML (es opcional) como, la versión, el encoding y la validación:
 ```
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 ```
 
 - Elementos
+
 Son los bloques fundamentales de un documento XML, forman parte de su cuerpo y dentro de ellos podemos encontrar o información o bien otros elementos. Se estructuran de forma que hay una etiqueta de apertura, contenido y una etiqueta de cierre, aunque también podemos encontrar atributos en ellos:
 ```
 <elemento>Hola</elemento>
 ```
 
 - Atributos
+  
 Los atributos proporcionan información adicional sobre un elemento. Son completamente opcionales aunque, a veces, nos resulta muy convenientes usarlos. Se colocan dentro de la etiqueta de apertura de un elemento y se forman de esta manera `nombre="valor"`. Aqui dejo un ejemplo
 ```xml
 <elemento atributo="valor">Hola</elemento>
 ```
 
 - Comentarios
+  
 Son partes del código que son ignoradas por el intérprete de xml. Se usan principalmente para una mejor comprensión del código y hacer ciertas aclaraciones para las personas que lo estén leyendo. Se colocan de manera que inicien con una etiqueta <, una exclamación, dos líneas diagonales, el contenido, dos líneas diagonales, y cierre con una etiqueta >, de la siguiente manera
 ```xml
 <!-- Esto es un comentario en XML -->
 ```
 
 - Espacios de nombres
+  
 Son un mecanismo de organización y evitan conflictos de nombres de otras fuentes. Se usan para documentos XML más complejos que funcionen con distintos estándares y distintas fuentes. Cuando definimos un espacio de nombres en una etiqueta, sus hijos lo heredarán. También podemos asignarle un prefijo al espacio de nombres Para una mayor organización. Se dfinen con `xmlns` dentro de una etiqueta y en caso de que queramos usar un prefijo lo hariamos poniendo dos puntos y el prefijo: `xmlns:ns`. Aqui dejo un ejemplo de uso de espacios de nombres:
 ```xml
 <root xmlns:ns="http://www.ejemplo.com/namespace">
@@ -186,6 +191,7 @@ Son un mecanismo de organización y evitan conflictos de nombres de otras fuente
 ```
 
 - Entidades
+  
 Al usar ciertos caracteres especiales, podemos crear conflictos en XML ya que estas pueden ser interpretadas como parte del código, para ello usaremos las entidades, que son una manera de representar estos caracteres para que sean representados como lo que son, en texto. Unos ejemplos son:
 ```
 &lt;: Representa el carácter <.
@@ -196,6 +202,7 @@ Al usar ciertos caracteres especiales, podemos crear conflictos en XML ya que es
 ```
 
 - CDATA
+  
 En un espacio CDATA, todo lo que esté dentro de este será interpretado como texto plano, es decir, no entrará dentro de las reglas de XML:
 ```xml
 <![CDATA[
@@ -206,6 +213,7 @@ En un espacio CDATA, todo lo que esté dentro de este será interpretado como te
 ## Validacióin de documentos
 ### DTD
 - Entidades
+  
 Puede que a lo largo de la creación del documento tengamos que repetir las mismas palabras y expresiones y para ello haremos uso de las entidades en DTD, en las cuales asociaremos frases o palabras a ciertas expresiones, de esta manera ahorraremos tiempo y espacio:
 ```xml
 <!ENTITY saludo "¡Hola, mundo!">
@@ -220,6 +228,7 @@ Y mostrará esto:
 ```
 
 - Anotaciones
+  
 Son comentarios. Los usaremos para organizar y aclarar el contenido en el DTD:
 ```xml
 <!-- Definición del DTD para un libro -->
@@ -235,6 +244,7 @@ Son comentarios. Los usaremos para organizar y aclarar el contenido en el DTD:
 ```
 
 - Elementos
+  
 En DTD definiremos los elementos que habrán en el XML, lo que contendrán y el tipo de dato que almacenarán. Lo haremos con la etiqueta `<!ELEMENT>` seguido del nombre del elemento y, dependiendo de si tiene información, que la pondremos con `(#PCDATA)`, o si tiene elementos, que pondremos los elementos que tiene entre paréntesis:
 ```xml
 <!ELEMENT sitio (latitud,longitud,nombre,descripcion,localidad)>
@@ -242,6 +252,7 @@ En DTD definiremos los elementos que habrán en el XML, lo que contendrán y el 
 ```
 
 - Atributos
+  
 Definiremos los atributos con una etiqueta `<!ATTLIST>` seguido del nombre del elemento, después el nobre del atributo y luego el tipo de datos. En el tipo de datos podemos restringirlo a ciertos valores:
 ```xml
  <!ATTLIST persona genero (masculino|femenino)>
@@ -250,6 +261,7 @@ Definiremos los atributos con una etiqueta `<!ATTLIST>` seguido del nombre del e
 
 ### XMLSchema
 - Definición
+  
 Es un lenguaje de validación de XML más flexible que DTD. Con él tendremos más control sobre el tipo de datos pudiendo ser más precisos a la hora de definirlos, pero a cambio es más complicado de leer, entender y escribir. Un pequeño ejemplo sería esto:
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -268,6 +280,7 @@ Es un lenguaje de validación de XML más flexible que DTD. Con él tendremos m�
 ```
 
 - Estructura básica
+  
 Debemos tener un espacio de nombres, como `xmlns:xs="http://www.w3.org/2001/XMLSchema` y los elementos. Dentro de los elementos tendremos información u otros elementos, y aparte los atributos (van dentro de la etiqueta del elemento). También podemos crear restricciones:
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -284,6 +297,7 @@ Debemos tener un espacio de nombres, como `xmlns:xs="http://www.w3.org/2001/XMLS
 ```
 
 - Elementos Locales y Globales
+  
 Los elementos locales se tratan de elementos que están encapsulados dentro de otros, es recomendable usarlos cuando no se van a referenciar mucho en el XML ya que no se pueden usar fuera del contexto en el que está en el esquema:
 ```xml
 <xs:element name="persona">
@@ -304,6 +318,7 @@ Los globales son representados fuera de otro elemento y podrán ser referenciado
 ```
 
 - Elementos simples
+  
 Un elemento simple puede contener contenido directamente, en este podremos hacer restricciones de contenido pero no podremos meter más elementos o atributos, para ello usaremos un elemento complejo:
 ```xml
 <xs:element name="puntuacion">
@@ -317,6 +332,7 @@ Un elemento simple puede contener contenido directamente, en este podremos hacer
 ```
 
 - Elementos complejos y subelementos
+  
 No pueden contener información directamente, si no que contendrán más elementos. Aquí podremos definir atributos. Se usan para anidar otros elementos que pueden ser simples o también otros complejos, estos son los subelementos. Se tratan de los elementos dentro de los complejos. Dentro de un elemento complejo podemos tener varios subelementos:
 ```xml
 <xs:element name="biblioteca">
@@ -346,6 +362,7 @@ No pueden contener información directamente, si no que contendrán más element
 ```
 
 - Atributos
+  
 Se deben introducir dentro de los elementos complejos. Los atributos tienen nombre y pueden tener otros valores dentro de la etiqueta, como un valor por defecto, su obligatoriedad o tipo de dato. A parte, podemos crear restricciones como en los elementos:
 ```xml
 <xs:element name="coche">
@@ -364,6 +381,7 @@ Se deben introducir dentro de los elementos complejos. Los atributos tienen nomb
 ```
 
 - Restricciones
+  
 Hemos hablado mucho sobre las restricciones, y bien, no creo que haga muchafalta explicar lo que son. Las usaremos para definir las reglas que seguirá el contenido que vamos a escribir en el XML. Hay muchos tipos de restricciones algunas de ellas son:
 
 * Restricción de Tipo (xs:simpleType)
@@ -387,6 +405,7 @@ Las podemos aplicar tanto a atributos como a elementos simples y podemos poner v
 ```
 
 - Tipos de datos
+  
 Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo haremos poniento `type=""` dentro de la etiqueta del elemento o bien poniendo `base=""` en la etiqueta de restricción. Alguno de estos tipos de datos (los más comunes) son:
 * xs:string --> cadena de caracteres
 * xs:integer --> Números enteros.
@@ -397,6 +416,7 @@ Con XMLSchema podemos ser muy precisos a la hora de indicar un tipo de dato. Lo 
 * xs:duration --> duración de tiempo en formato “PnYnMnDTnHnMnS”.
 
 - Comentarios
+  
 Tienen la misma función que en cualquier otro código: organizar y entender el contenido:
 ```xml
 <!-- Esto es un comentario, lo de abajo, un elemnto -->

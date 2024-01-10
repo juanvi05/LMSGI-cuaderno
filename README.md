@@ -435,26 +435,55 @@ En XML Schema, podemos incluir comentarios mediante el uso de la anotación `xs:
 ```
 ## Sistemas de Gestión de Información
 - __Características__
+
 Los sistemas de gestión de la información son programas destinados a facilitar los procesos de una empresa y su gestión ya que nos ofrecen un gran abanico de funcionalidades, por ejemplo, podremos gestionar Recursos Humanos con un ERP. Se caracterizan por ser flexibles y adaptarse a los distintos tipos de empresa, aunque nos podemos encontrar algunos especializados en cierto tipo de actividades o departamentos.
 
 - __Tipos__
+
 Podemos encontrar distintos tipos de sistemas de gestión de información, como los ERPs CRMs o el uso de Business Intelligence (BI)
 
 ## ERP
 - __Características y beneficios__
+
 Los ERPs integran los diferentes procesos internos de las empresas haciendo posible una mejor gestión y surpervisión de estos. Un ERP debe tener una amplia funcionalidad, es decir, que pueda brindar soluciones a todos o a la mayoría de los procesos de una empresa. Cuentan con módulos, los cuales son opcionales e independientes, para que el producto se pueda adaptar a nuestras necesidades, además su base de datos debe estar centralizada y tiene que incorporar mecanismos de seguridad para garantizar fiabilidad e integridad en los datos. Hay que resaltar también que un ERP tiene que poder mantenerse mejorarse y ampliarse dependiendo de las necesidades de nuestra empresa ya que esto permitirá la escalabilidad en un futuro. Todo esto hace que nuestra productividad suba y podamos optimizar los procesos a parte de abaratar los costes de la gestión de información.
 
 - __ERP más conocidos__
+
 Podemos destacar entre los ERPs más reconocido Odoo, SageX3, SAP o Apache OfBiz.
 
 ## CRM
 - __Características y beneficios__
+
 Se trata de una herramienta orientada todo lo relacionado con los clientes. Con los CRMs gestionaremos las interacciones con los clientes y podremos segmentarlos para mejorar las campañas de marketing y clasificarlos según ciertos criterios. Unificaremos los canales de comunicación y podremos supervisar y gestionar las acciones realizadas con el cliente además podremos gestionar las redes sociales. Todo esto mejorará nuestra relación con los clientes pudiendo realizar campañas de marketing más efectivas y aumentando las posibilidades y oportunidades de venta además de facilitar la toma de decisiones.
 
 - __CRM más conocidos__
+
 Algunos de los más conocidos son Salesforce, Zoho u Oracle Customer Experience.
 
 ## BI
 - __Definición y componentes__
 Es el conjunto de tecnologías que tienen como objetivo ayudar y facilitar la dirección de una empresa, y se componen de:
 
+* ETL (Proceso de extracción de procesos)
+* Data Warehouse (Almacén de datos procesados)
+* OLAP (Procesamiento analítico en línea)
+* Data mining (Minería de datos
+* DashBoard
+
+### ETL
+En este proceso se obtiene información acerca de las operaciones realizadas por la empresa diariamente. Se procesan y se guardan en un almacén de datos. Se subdivide en 3 procesos según sus siglas:
+* Extraer (Extract) - Extraer los datos
+* Transformar (Transform) - Transformarlos, clasificarlos y estructurarlos
+* Cargar (Load) -  Cargar los datos al almacén
+
+### Data Warehouse
+Se trata del almacén de datos. Aquí se guardan los datos de una empresa para una correcta toma de decisiones, incluyendo los extraidos por el ETL
+
+### OLAP
+Online Analytical Processing. Nos facilita el acceso a los datos almacenados en el Data Warehouse y así alimentar el siguiente proceso:
+
+### Data Mining
+Es un proceso mediante el cual se buscan patrones entre un gran volumen de datos
+
+### DashBoard
+Este nos mostrará de forma visual los datos que se obtienen de los procesos anteriores y así podremos analizarlos y realizar una mejor toma de decisiones y realizar acciones que creamos pertinentes

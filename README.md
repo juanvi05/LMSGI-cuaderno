@@ -462,6 +462,7 @@ Algunos de los más conocidos son Salesforce, Zoho u Oracle Customer Experience.
 
 ## BI
 - __Definición y componentes__
+
 Es el conjunto de tecnologías que tienen como objetivo ayudar y facilitar la dirección de una empresa, y se componen de:
 
 * ETL (Proceso de extracción de procesos)

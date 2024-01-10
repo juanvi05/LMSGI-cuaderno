@@ -442,4 +442,19 @@ Podemos encontrar distintos tipos de sistemas de gestión de información, como 
 
 ## ERP
 - __Características y beneficios__
-Los ERPs integran los diferentes procesos internos de las empresas haciendo posible una mejor gestión y surpervisión de estos. Un ERP debe tener una amplia funcionalidad, es decir, que pueda brindar soluciones a todos o a la mayoría de los procesos de una empresa. Cuentan con módulos, los cuales son opcionales e independientes, para que el producto se pueda adaptar a nuestras necesidades.
+Los ERPs integran los diferentes procesos internos de las empresas haciendo posible una mejor gestión y surpervisión de estos. Un ERP debe tener una amplia funcionalidad, es decir, que pueda brindar soluciones a todos o a la mayoría de los procesos de una empresa. Cuentan con módulos, los cuales son opcionales e independientes, para que el producto se pueda adaptar a nuestras necesidades, además su base de datos debe estar centralizada y tiene que incorporar mecanismos de seguridad para garantizar fiabilidad e integridad en los datos. Hay que resaltar también que un ERP tiene que poder mantenerse mejorarse y ampliarse dependiendo de las necesidades de nuestra empresa ya que esto permitirá la escalabilidad en un futuro. Todo esto hace que nuestra productividad suba y podamos optimizar los procesos a parte de abaratar los costes de la gestión de información.
+
+- __ERP más conocidos__
+Podemos destacar entre los ERPs más reconocido Odoo, SageX3, SAP o Apache OfBiz.
+
+## CRM
+- __Características y beneficios__
+Se trata de una herramienta orientada todo lo relacionado con los clientes. Con los CRMs gestionaremos las interacciones con los clientes y podremos segmentarlos para mejorar las campañas de marketing y clasificarlos según ciertos criterios. Unificaremos los canales de comunicación y podremos supervisar y gestionar las acciones realizadas con el cliente además podremos gestionar las redes sociales. Todo esto mejorará nuestra relación con los clientes pudiendo realizar campañas de marketing más efectivas y aumentando las posibilidades y oportunidades de venta además de facilitar la toma de decisiones.
+
+- __CRM más conocidos__
+Algunos de los más conocidos son Salesforce, Zoho u Oracle Customer Experience.
+
+## BI
+- __Definición y componentes__
+Es el conjunto de tecnologías que tienen como objetivo ayudar y facilitar la dirección de una empresa, y se componen de:
+

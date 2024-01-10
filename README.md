@@ -433,3 +433,13 @@ En XML Schema, podemos incluir comentarios mediante el uso de la anotación `xs:
     </xs:restriction>
   </xs:simpleType>
 ```
+## Sistemas de Gestión de Información
+- __Características__
+Los sistemas de gestión de la información son programas destinados a facilitar los procesos de una empresa y su gestión ya que nos ofrecen un gran abanico de funcionalidades, por ejemplo, podremos gestionar Recursos Humanos con un ERP. Se caracterizan por ser flexibles y adaptarse a los distintos tipos de empresa, aunque nos podemos encontrar algunos especializados en cierto tipo de actividades o departamentos.
+
+- __Tipos__
+Podemos encontrar distintos tipos de sistemas de gestión de información, como los ERPs CRMs o el uso de Business Intelligence (BI)
+
+## ERP
+- __Características y beneficios__
+Los ERPs integran los diferentes procesos internos de las empresas haciendo posible una mejor gestión y surpervisión de estos. Un ERP debe tener una amplia funcionalidad, es decir, que pueda brindar soluciones a todos o a la mayoría de los procesos de una empresa. Cuentan con módulos, los cuales son opcionales e independientes, para que el producto se pueda adaptar a nuestras necesidades.

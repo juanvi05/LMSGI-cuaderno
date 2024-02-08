@@ -488,3 +488,24 @@ Es un proceso mediante el cual se buscan patrones entre un gran volumen de datos
 
 ### DashBoard
 Este nos mostrará de forma visual los datos que se obtienen de los procesos anteriores y así podremos analizarlos y realizar una mejor toma de decisiones y realizar acciones que creamos pertinentes
+
+## HTML
+### Historia
+|Año|Versión|
+|---|-------|
+|1991|Diseño Inicial|
+|1992|1.1|
+|1995|2.0|
+|1997|3.2|
+|1997|4.0|
+|1999|4.1|
+|2000|XHTML|
+|2014|5.0|
+|2016|5.1|
+|2017|5.2|
+
+
+
+
+
+

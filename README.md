@@ -504,8 +504,13 @@ Este nos mostrará de forma visual los datos que se obtienen de los procesos ant
 |2016|5.1|
 |2017|5.2|
 
+### XHTML diferencias, ventajas y desventajas con respecto a HTML
+Se trata de un lenguaje busca ampliar las capacidades de HTML agregándole las normas de XML siguiendo sus reglas a diferencia de HTML. Como es de esperar, guarda ciertas similitudes con HTML pero también cuenta con ciertas diferencias:
 
-
-
-
-
+* Las etiquetas deben estar anidadad
+* Todas las eetiquetas tienen que estar cerradas
+* No puede haber texto fuera de las etiquetas
+* Las etiquetas y sus atributos deben ir en minúscula
+* Todos los atributos deben tener valor e ir entre comillas
+* No se deben insertar elementos de bloque en elementos en línea
+* Scripts y estilos deben ir en un CDATA

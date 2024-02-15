@@ -514,3 +514,49 @@ Se trata de un lenguaje busca ampliar las capacidades de HTML agregándole las n
 * Todos los atributos deben tener valor e ir entre comillas
 * No se deben insertar elementos de bloque en elementos en línea
 * Scripts y estilos deben ir en un CDATA
+
+### Estructura de un documento HTML
+Un documento HTML está formado por:
+
+#### Cabecera
+* Title
+En esta etiqueta se guarda el título de la página. Esto ayudará al usuario a ser consciente de qué página está visuaizando. Esto se verá en el navegador pero no en la página en si. Esta etiqueta es opcional
+
+```html
+<html>
+ <head>
+ <title> Mi Página </title>
+</head>
+```
+
+* Meta
+Guarda metadatos de la página. Esto informa al navegador de cómo van a ser los datos a representar:
+__charset__: Codificación de los caracteres, usualmente UTF-8
+__name__: nombre del metadato
+__content__: valor asociado a atributos
+__http-equiv__: Especifica una directiva. Aqui hay algunos ejemplos:
+ - Content type: indica el tipo de contenido usando los tipos MIME y la codificación de caracteres
+ - cache-control: define como debe gestionar el navegador la caché referente a la web
+ - refresh: le dice al navegador que tras un tiempo debe refrescar la página
+ - robots:  Indica a los motores de búsqueda (Como google) donde se encuentra el fichero robots.txt o que páginas no deben ser indexada
+ - keywords: palabras clave. Indica a los motores de búsqueda las palabras clave asociadas a la página, interesante para el posicionamiento SEO
+ - author: indica el autor de la página
+ - copyright: aquí se define el propietario de los derechos de autor
+ - viewport indica el ancho de la zona a representar la página. Esto es interesante ya que nunca sabremos en que dispositivo se va a visualizar el contenido y esto hará que la página se adapte a la pantalla del usuario
+
+*  Style
+Aquí se establece el estilo mediante el uso del lenguaje CSS
+
+* Link
+Esta etiqueta establece una relación con un recurso externo, como puede ser una hoja de estilos:
+´´´html
+<html>
+ <head>
+ <link href="style.css" rel="stylesheet" />
+ </head>
+ ´´´
+ ´href´ indica dónde se encuentra el recurso y ´rel´ indica que recurso es. Por ejemplo stylesheet nos dice que es una hoja de estilos
+
+* Script
+* 
+ 

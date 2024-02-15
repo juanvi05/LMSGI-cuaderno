@@ -530,6 +530,7 @@ En esta etiqueta se guarda el título de la página. Esto ayudará al usuario a 
 ```
 
 * Meta
+
 Guarda metadatos de la página. Esto informa al navegador de cómo van a ser los datos a representar:
 __charset__: Codificación de los caracteres, usualmente UTF-8
 __name__: nombre del metadato
@@ -545,18 +546,54 @@ __http-equiv__: Especifica una directiva. Aqui hay algunos ejemplos:
  - viewport indica el ancho de la zona a representar la página. Esto es interesante ya que nunca sabremos en que dispositivo se va a visualizar el contenido y esto hará que la página se adapte a la pantalla del usuario
 
 *  Style
+
 Aquí se establece el estilo mediante el uso del lenguaje CSS
 
 * Link
+
 Esta etiqueta establece una relación con un recurso externo, como puede ser una hoja de estilos:
-´´´html
+```html
 <html>
  <head>
  <link href="style.css" rel="stylesheet" />
  </head>
- ´´´
- ´href´ indica dónde se encuentra el recurso y ´rel´ indica que recurso es. Por ejemplo stylesheet nos dice que es una hoja de estilos
+ ```
+ `href` indica dónde se encuentra el recurso y `rel` indica que recurso es. Por ejemplo stylesheet nos dice que es una hoja de estilos
 
 * Script
-* 
- 
+
+Permite añadir un script de código ejecutable como JavaScript, el cual puede estar dentro de la etiqueta o como recurso externo
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+        // Definir una variable global
+        var miVariableGlobal = "hola ;)";
+    </script>
+```
+
+#### Cuerpo HTML
+Existen distintos tipos de elementos dentro de `<body>`:
+
+- Elemetos de bloque
+Ocupan todo el espacio del elemento contenedor y que normalente permiten contener otros elementos. Aquí nos encontramos con:
+
+__Header__: Se trata del encabezado de la web. Suele incluir el título de la web y un logo
+```html
+  <header>
+        <h1>pagina chulisima</h1>
+    </header>
+```
+__Nav___: Suele albergar enlaces de navegación, tanto a elementos internos como externos
+```html
+<nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+```
+__Main__: la etiqueta main alberga el contenido principal de la

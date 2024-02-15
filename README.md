@@ -596,4 +596,66 @@ __Nav___: Suele albergar enlaces de navegación, tanto a elementos internos como
             </ul>
         </nav>
 ```
-__Main__: la etiqueta main alberga el contenido principal de la
+__Main__: la etiqueta main alberga el contenido principal de la página web y dentro de él nos podemos encontrar secciones y artículos (section y article). Solo debe haber una únua etiqueta main y que esta esté bien estructurada
+
+__Aside__: se utiliza para definir contenido auxiliar al del main. La idea es que sea contenido fijo en forma de menú con información de interés en relación a la página colocado en un lado
+
+__Section__: se usa para delimitar las secciones en una página y que esté mejorn organizada
+```html
+<article>
+            <h2>Título del artículo 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et magna vitae eros maximus condimentum sit amet sit amet leo.</p>
+        </article>
+```
+__Footer__: define el pie de página conteniendo enlaces genrales de la página o información de la misma o de la persona que la crea como contactos o redes sociales
+```html
+<footer>
+        <p>Derechos de autor &copy; 2024 Mi Sitio Web</p>
+    </footer>
+```
+__Div__: permite almacenar un contenedor con contenido personalizado
+```html
+ <div id="contenido1">
+            <h2>Sección 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et magna vitae eros maximus condimentum sit amet sit amet leo.</p>
+        </div>
+```
+Podemos encontrar otras etiquetas como details, que al desplegar muestra contenido textual junto con la etiqueta summary, summary que almacena una dirección, dialog que muestra un diálogo al usuario (solo será visible si tene el atributo open), figure que nos permite mostrar una imagen con leyenda, la cual se añade con la etiqueta figcaption, la etiqueta hr establece un delimitador de secciones en forma de línea horizontal, o pre que puestra el texto tal cual como se encuentra en el documento html
+
+- Elementos de línea
+Se tratan de los elementos que ocupan solamente el espacio del contenido independientemente del contenedor. Nos encontramos:
+__Abbr__: indica que un texto es una abreviatura o acrónimo/siglas y mostrar que significa y aparecerá subrayado
+```html
+<abbr title=”Hypertext Markup Language”>HTML</abbr>
+```
+__Bdi y bdo__: Las etiquetas bdi y bdo, permiten establecer la dirección del texto, o anular el mismo esto permitirá establecer el valor de la dirección del texto utilizando el atributo dir (con los valores rtl lrt)
+```html
+<p>La siguiente palabra está en árabe: <bdi dir="rtl">مرحبا بك</bdi>.</p>
+<p>La siguiente palabra está en árabe, pero se ha forzado a que sea leída de izquierda a derecha: <bdo dir="ltr">مرحبا بك</bdo>.</p>
+```
+__Cite__: se trata de una cita. Indica que el texto que contiene referencia una fuente externa (autor, artículo, persona...)
+```html
+<cite>Lana del Rey</cite> dijo una vez: "We had nothing to lose, nothing to gain, nothing we desired anymore, except to make our life into a work of art.".</p>
+```
+__Code__: muestra un código fuente en otro lenguaje de programación como java, python, etc.
+```html
+<code>
+            <pre>
+                <span style="color: blue;">print</span>(<span style="color: green;">"Hola, mundo"</span>)
+            </pre>
+        </code>
+```
+__Data__: permite asignar valores a elementos para que sean procesados por una máquina
+```html
+<data value=”10500300”>10500300</data>
+```
+__Del__: muestra un elemento tachado e información de por qué lo está
+```html
+<p> La mejor cantante es<del
+datetime=”2020-03-04 0:00:00” cite="razonesporlasquetaylorswiftesmalisima.html>Taylor Swift</del>Lana del Rey</p>
+```
+__Dfn__: se usa para definir un término, el cual aparecerá en cursiva y seguido de su definición
+```html
+<p><dfn>Spotify</dfn> es una plataforma de música en streaming que ofrece acceso a una amplia variedad de canciones, álbumes y playlists a través de internet. Los usuarios pueden escuchar música bajo demanda, crear listas de reproducción personalizadas y descubrir nuevos artistas y géneros musicales. Además, Spotify ofrece servicios gratuitos con anuncios y suscripciones premium sin publicidad para una experiencia de escucha sin interrupciones.</p>
+```
+ins

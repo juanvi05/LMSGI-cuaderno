@@ -658,4 +658,38 @@ __Dfn__: se usa para definir un término, el cual aparecerá en cursiva y seguid
 ```html
 <p><dfn>Spotify</dfn> es una plataforma de música en streaming que ofrece acceso a una amplia variedad de canciones, álbumes y playlists a través de internet. Los usuarios pueden escuchar música bajo demanda, crear listas de reproducción personalizadas y descubrir nuevos artistas y géneros musicales. Además, Spotify ofrece servicios gratuitos con anuncios y suscripciones premium sin publicidad para una experiencia de escucha sin interrupciones.</p>
 ```
-ins
+__Ins__: agregan trazabilidad en el documento, es decir, permiten identificar elementos que se han añadido recientemente al documento. Cuenta con los atributos `cite`, que contiene la URL con la explicación del cambio y `datetime` que contiene la fecha o la hora en la que se ha realizado el cambio
+```html
+ <p>Xiaomi cuenta con la serie Xiaomi, Redmi y <ins>Poco</ins></p>
+```
+__Kbd__: permite definir atajos de teclado para mejorar la comprensión y usabilidad de la web:
+```html
+ <p> Para arrancar el servidor podemos usar
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> y pulsar la
+opción <em>Live Server: Open With Live Server</em></p>
+```
+__Mark__: resalta el texto con un color, por defecto en amarillo:
+```html
+<p>El siguiente texto tiene una pedazo de<mark>palabra destacada guapísima</mark>.</p>
+```
+__q__: se utiliza para representar un texto citado, que puede ir acompañado de `cite`
+```html
+<p>Le dijeron: <q>si te juntas con ellos acabarás siendo igual</q>.</p>
+```
+__Samp__: indica que el texto ha sido proporcionado por el ordenador y lo diferencia del resto:
+```html
+<p><samp>Presione F5 para continuar </samp></p>
+```
+__Slot y small__: `Slot`permite definir componentes reutilizables y `small hace que un texto tenga una fuente más pequeña:
+```html
+<p>Este es un ejemplo de uso de <small><slot>lorem ipsum</slot></small>
+```
+__Span__: nos permite delimitar una porción del texto para que pueda ser personalizada en CSS de manera independiente al párrafo:
+```html
+<p>Texto normal o <span class"clase1">especial</span></p>
+```
+__Sub y sup__: se utilizan para crear subindices y superindices respectivamente:
+```html
+<p>0=ax<sup>2</sup>+bx+c</p>
+```
+__Template y time__: con `template` podemos crear fragmentos de documento mediante javascript y `time` permite establecer de manera semántica un tiempo. Tiene el atributo `datetime` que es información que va a ser leída por la máquina

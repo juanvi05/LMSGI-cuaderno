@@ -692,4 +692,60 @@ __Sub y sup__: se utilizan para crear subindices y superindices respectivamente:
 ```html
 <p>0=ax<sup>2</sup>+bx+c</p>
 ```
-__Template y time__: con `template` podemos crear fragmentos de documento mediante javascript y `time` permite establecer de manera semántica un tiempo. Tiene el atributo `datetime` que es información que va a ser leída por la máquina
+__Template y time__: con `template` podemos crear fragmentos de documento mediante javascript y `time` permite establecer de manera semántica un tiempo. Tiene el atributo `datetime` que es información que va a ser leída por la máquina:
+```html
+<p>La fecha y hora actual es: <time datetime="2024-02-23T12:00">23 de febrero de 2024, 12:00 PM</time>.</p>
+```
+__Var y wbr__: con `var` podemos indicar que una palabra es una variable, la cual se mostrará en cursiva por defecto, y `wbr` indicará dónde se puede hacer un salto de línea en caso de que el texto sobrepase el espacio asignado:
+```html
+ <p>El valor de <var>x</var> es igual a 10<wbr>+<wbr>5<wbr>
+```
+- Listas, tablas y formularios
+
+__Listas__: son elementos que nos proporcionaran una manera de organizar la información del documento de una manera más visual y diferenciar los elementos nos podemos encontrar:
+Listas desordenadas: se crean con el elemento `ul` y muestran la información en viñetas:
+```html
+<ul>
+ <li>Elemento 1</li>
+ <li>Elemento 2</li>
+ <li>Elemento 3</li>
+</ul>
+```
+Listas ordenadas: con el elemento `ol`. Cuentan con una numeración en un orden concreto. Esto  puede ser modificado con los atributos `start`(para indicar el inicio de la lista), `reversed` (ascendente con false y descendente con true) y `type` (indica el tipo de lista, por ejemplo si queremos que se haga por numeros romanos o por letras)
+```html
+<ol type=”i”> <!--En números romanos en minúscula-->
+ <li>Elemento i</li>
+ <li>Elemento ii</li>
+ <li>Elemento iii</li>
+</ol>
+```
+Listas de definición: con el elemento `dl`. Permiten mostrar términos con sus definiciones. El término a definir se muestra con `dt`, y su definición con `dd`
+```html
+<dl>
+ <dt>Microsoft</dt>
+ <dd>Microsoft es una empresa dedicada a…</dd>
+</dl>
+```
+__Tablas__: es un contenedor de elementos que permite organizarlos en filas y columnas. Una tabla se define con el elemento `table`, y dentro de él nos podemos encontrar los siguientes elementos:
+Thead: indica el encabezado de una tabla, las columnas del encabezado se definen con `th` 
+Thbody: indica el cuerpo de la tabla, con `tr` definiremos las filas y con `td` las columnas de cada fila. Para combinar celdas usaremos, dentro de  `td`, `colspan` para indicar las columnas que forman la celda combinada y `rowspan` para indicar las filas que la forman
+Tfoot: indica el pie de la tabla
+Caption: indica el título de la tabla
+```html
+<table>
+  <thead>
+    <th>Cabecera1</th>
+    <th>Cabecera2</th>
+  </thead>
+<tbody>
+   <tr>
+     <td>Elemento 1</td>
+     <td>Elemento 2</td>
+   </tr>
+</tbody>
+</table>
+```
+__Formularios__: se trata de un elemento que permite que el usuario envíe información por la web gracias a sus elementos interactivos. Se inicia con `form` y tiene los siguientes atributos
+Action: definimos la URL de destino
+Method: el método para enviar la petición HTTP que normalmente va a ser GET o POST
+Target:

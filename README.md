@@ -824,4 +824,9 @@ srcset y sizes: permite asignar diferentes recursos para que el navegador cargue
 usemap: referencia a un mapa en la etiqueta `map`
 ismap: indica que es parte de un mapa del lado del servidor
 width y height: ancho y alto
-decoding: indica cómo se debe decodificar la imágen; async (asíncrono), sync (síncrono)
+decoding: indica cómo se debe decodificar la imágen; async (asíncrono), sync (síncrono) y auto (decide el navegador)
+loading: indica como se cargará la imágen; eager (inmediatamente) o lazy (a posteriory)
+
+__Mapas__: se insertan con la etiqueta `map` y estos son imágenes interactivas. Cuenta con el elemento `area`, el cual es el que nos va a permitir definir qué partes del mapa serán las interactivas y qué haran cuando interactuemos con ellas. Cuente con los siguientes atributos:
+alt: versión en texto del área
+shape: tipo de figura con la cual se va a representar el área interactuable; circle (círculo), rect (rectangular), poly (polígono) o default (todo el 

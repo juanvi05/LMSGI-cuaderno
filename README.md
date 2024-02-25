@@ -829,4 +829,57 @@ loading: indica como se cargará la imágen; eager (inmediatamente) o lazy (a po
 
 __Mapas__: se insertan con la etiqueta `map` y estos son imágenes interactivas. Cuenta con el elemento `area`, el cual es el que nos va a permitir definir qué partes del mapa serán las interactivas y qué haran cuando interactuemos con ellas. Cuente con los siguientes atributos:
 alt: versión en texto del área
-shape: tipo de figura con la cual se va a representar el área interactuable; circle (círculo), rect (rectangular), poly (polígono) o default (todo el 
+shape: tipo de figura con la cual se va a representar el área interactuable; circle (círculo), rect (rectangular), poly (polígono) o default (todo el área)
+coords: coordenadas de la figura (depende de la forma)
+href: ruta a la que apunta, puede ser una URL o en local
+target: dónde se cargará el elemento al pulsar sobre él
+download, ping y rel: igual que para los enlaces
+
+__Imágenes vectoriales__: se tratan de imágenes que no se deformarán o se emborronarán si se reescalan y gracias al elemento `svg` podremos crearlas
+```html
+<svg xmlns=”http://w3.org/2000/svg/” width=”150”
+height=”100”>
+<rect width=”4” height=”1” y=”0” fill=”#00ab39” />
+</svg>
+```
+
+__Canvas__: nos brinda un lienzo sobre el que mostrar gráficos, usando normalmente lenguajes de script como puede ser JavaScript y cuenta con los atributos `width` y `heigth`
+
+__Contenido Incrustado__: se trata de contenido que está alojado fuera de nuestra web pero que podrá ser usado dentro de esta. Podemos distinguir 3 etiquetas:
+  Embed: contenido incrustado por un plugin o elemento externo y dependiendo del contenido, puede que sea más o menos soportado por el navegador. Tiene los atributos `src` (fuente del recurso), `type` (tipo MIME), `width` y `heigth`
+
+
+  iframe: es un documento HTML externo incrustado, y cuenta con los siguientes atributos
+  
+src
+
+srcdoc: contiene el código HTML a mostrar
+
+sandbox: restricciones al documento incrustado
+
+allow: directivas referentes a permisos
+
+allowfullscreen: permitie el tamaño a pantalla completa
+
+width y heigth
+
+loading (lazy o eager)
+
+
+  Object: permite incrustar cualquier otro elemento que esté dentro de los tipos MIME y cuenta con los siguientes elementos
+
+data: conteine el recurso que se va a mostrar
+
+type: tipo MIME
+
+name: nombre que puede ser usado para hacer referencia a este recurso
+
+usemap: referencia a un mapa
+
+form: referencia al id de un formulario
+
+width y heigth
+
+
+- Herramientas de edición y desarrollo web
+

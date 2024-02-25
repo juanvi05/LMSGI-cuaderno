@@ -727,9 +727,13 @@ Listas de definición: con el elemento `dl`. Permiten mostrar términos con sus 
 </dl>
 ```
 __Tablas__: es un contenedor de elementos que permite organizarlos en filas y columnas. Una tabla se define con el elemento `table`, y dentro de él nos podemos encontrar los siguientes elementos:
+
 Thead: indica el encabezado de una tabla, las columnas del encabezado se definen con `th` 
+
 Thbody: indica el cuerpo de la tabla, con `tr` definiremos las filas y con `td` las columnas de cada fila. Para combinar celdas usaremos, dentro de  `td`, `colspan` para indicar las columnas que forman la celda combinada y `rowspan` para indicar las filas que la forman
+
 Tfoot: indica el pie de la tabla
+
 Caption: indica el título de la tabla
 ```html
 <table>
@@ -746,50 +750,93 @@ Caption: indica el título de la tabla
 </table>
 ```
 __Formularios__: se trata de un elemento que permite que el usuario envíe información por la web gracias a sus elementos interactivos. Se inicia con `form` y tiene los siguientes atributos
+
 Action: definimos la URL de destino
+
 Method: el método para enviar la petición HTTP que normalmente va a ser GET o POST
+
 Target: indica donde se va a abrir el contenido (_self o _blank)
+
 Autocomplete: indica si el formulario va a permmitir el auto relleno o no
 
+
 Los elementos de entrada de un formulario se definen con la etiqueta `input`, esta puede ser de varios tipos:
+
 Button: es un botón
+
 checkbox: es una casilla marcable
+
 color: se puede seleccionar un color RGB
+
 date: una fecha
+
 datetime-local: fecha y hora
+
 email: correo electrónico
+
 file: un archivo
+
 hidden: elemento 
+
 image: un botón para enviar el formulario pero con una imágen
+
 month: mes y año
+
 number: valor numérico
+
 password: una contraseña (no se verá en pantalla)
+
 radio: selección de un único elemento
+
 range: selección de un elemento mediante un rango
+
 reset: resetear formulario
+
 search: búsqueda
+
 submit: enviar formulario
+
 tel: un teléfono
+
 text: texto libre
+
 time: hora
+
 url
+
 week: alo y ordinal de la semana
 
+
 Input cuenta con varios atributos:
+
 autocomplete: Indica si un elemento se puede autocompletar o no
+
 autofocus: indica si este elemento tendrá el foco cuando cargue la página
+
 disabled: desactiva el componente
+
 form: Referencia al id del formulario
+
 list: asocia el componente con una lista de opciones
+
 name: nombre del elemento que se enviará en la información del formulario
+
 placeholder: indica un valor que aparecerá para indicar información extra
+
 readonly: solo lectura
+
 required: elemento obligatorio
+
 type: tipo de elemento
+
 value: valor por defecto
+
 maxlength y minlength: longitud máxima o mínima de caracteres
+
 min y max: valor mínimo y máximo numérico
+
 pattern: expresiones regulares
+
 
 Existe otro elemento, `select` que nos permite seleccionar elementos de entre una lista de opciones. Las opciones se definen en la etiqueta `option` dentro de `select`.
 Podemos agrupar campos con `fieldset` y con `label` podemos asignarle una etiqueta a un campo mediante su id con el atributo `for`
@@ -797,43 +844,77 @@ Podemos agrupar campos con `fieldset` y con `label` podemos asignarle una etique
 - Elementos Multimedia
 
 Podemos agregar a nuestra página contenido multimedia, como audio, vídeo o imágenes:
+
 __Audio__: lo agregamos con la etiqueta `audio` que cuenta con los siguientes atributos:
+
 src: la direcció del recurso, puede ser una ruta local o una URL
+
 preload: define cómo se realizará la precarga con none (sin precarga), metadata (se precargará los metadatos) y auto (a criterio del navegador)
+
 autoplay: reproducción automática
+
 loop: en bucle
+
 muted: silencia el audio
+
 controls: interfaz de controles multimedia
 
+
 __Video__: lo insertamos con la etiqueta `video` y tiene los siguientes elementos:
+
 src: ruta o URL del recurso
+
 poster: muestra una imágen mientras se carga el vídeo
+
 playsinline: reproduce el vídeo dentro de su área y no a pantalla completa
+
 width y height: ancho y alto del vídeo
 
+
 __Track__: puede usarse junto a `audio` y `video` y permite añadir información a estos elementos:
+
 default: elemento track a usar por defecto
+
 kind: tipo de pista, subtitles (subtítulos), captions (transcripciones) descriptions (descripciones), chapters (capítulos) y metadata
+
 label: título de la pista
+
 srclang: idioma del elemento
 
+
 __Imágenes__: se insertan con `img` y tiene los siguientes atributos:
+
 alt: descripción de la imágen de forma altenrativa (accesibilidad)
+
 src: dónde se encuentra la imágen (ruta, URL...)
+
 srcset y sizes: permite asignar diferentes recursos para que el navegador cargue la versión más adecuada
+
 usemap: referencia a un mapa en la etiqueta `map`
+
 ismap: indica que es parte de un mapa del lado del servidor
+
 width y height: ancho y alto
+
 decoding: indica cómo se debe decodificar la imágen; async (asíncrono), sync (síncrono) y auto (decide el navegador)
+
 loading: indica como se cargará la imágen; eager (inmediatamente) o lazy (a posteriory)
 
+
 __Mapas__: se insertan con la etiqueta `map` y estos son imágenes interactivas. Cuenta con el elemento `area`, el cual es el que nos va a permitir definir qué partes del mapa serán las interactivas y qué haran cuando interactuemos con ellas. Cuente con los siguientes atributos:
+
 alt: versión en texto del área
+
 shape: tipo de figura con la cual se va a representar el área interactuable; circle (círculo), rect (rectangular), poly (polígono) o default (todo el área)
+
 coords: coordenadas de la figura (depende de la forma)
+
 href: ruta a la que apunta, puede ser una URL o en local
+
 target: dónde se cargará el elemento al pulsar sobre él
+
 download, ping y rel: igual que para los enlaces
+
 
 __Imágenes vectoriales__: se tratan de imágenes que no se deformarán o se emborronarán si se reescalan y gracias al elemento `svg` podremos crearlas
 ```html
@@ -883,3 +964,4 @@ width y heigth
 
 - Herramientas de edición y desarrollo web
 
+Para trabajar con la web esencialmente contamos con 2 herramientas: un editor de código y un navegador. El navegador interpretará el código HTML y lo mostrará en pantalla, podemos hacer uso de cualquier navegador (es recomendable que esté actualizado y no esté descontinuado) y a su misma vez usar el editor de código que queramos ya que prácticamente todos permitirán el uso de HTML y CSS, pero es bueno comparar ya que lo que realmente va a cambiar la experiencia son las herramientas que nos dan para trabajar y las extensiones y plugins que podemos usar.

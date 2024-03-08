@@ -1050,5 +1050,48 @@ CSS se basa en el modelo de cajas para dar estilo y manejar la posición de los 
 - Ancho: ´width´
 - Alto: ´heigth´
 
-Dentro de la propiedad Display podemos encontrar el valor ´flex´ el cual permite crear elementos flexibles y fluyentes
+Dentro de la propiedad Display podemos encontrar el valor ´flex´ el cual permite crear elementos flexibles y fluyentes en el documento usando el modelo flexbox. La dirección en la que fluye se establece con ´flex-direction´. También nos encontramos con el elemento grid, el cualb nos permitirá crear una tabla o cuadrícula usando menos código y con muchas más opciones. Con ´grid-template-columns´ definiremos la cuadrícula y sus dimensiones.
+
+Para controlar la posicion del elemento, podemos usar las propiedades float y position.
+Float tiene los siguientes valores
+- left: empuja el elemento a la izquierda
+- right: empuja el elemento a la derecha
+- none: no lo empuja
+- inherit: hereda el valor de float de su padre
+
+Con position definiremos la posición del elemento dependiendo de su contenedor o por el mismo. Tiene los siguientes valores:
+- static: sigue el flujo normal
+- relative: de forma relativa al anterior elemento
+- absolute: posición absoluta con respecto al documento
+- fixed: deja de seguir el flujo normal del documento
+- sticky: sigue el flujo normal y se puede establecer la posición límite
+
+Al texto le podemos añadir también ciertas propiedades para darle formato:
+- color
+- font-family: fuente del texto
+- font-size: tamaño
+- font-weight: grosor y trazo de la fuente
+- text-align: alineación del texto (left, right, center y justify)
+- letter-spacing: espacio entre letras
+
+También a las listas se les puede agregar ciertas propiedades:
+- list-style-type: indica el tipo de viñeta a utilizar mediante los valores disc,
+circle, square, decimal, lower-roman, upper-roman,
+lower-greek, lower-latin, lower-latin y none
+- list-style-position: posición de las viñetas ´inside´ u ´outside´
+- list-style-image: establece que la viñeta sea una imágen usando una ruta o URL
+
+No sabemos en qué tipo de dispositivo se visualizará el contenido, puede ser un ordenador, una tablet, un móvil o un Frigorífico Samsung Side by Side Family Hub Inox RS6HA8880S9, por lo que el tamaño de la pantalla puede variar. Para eso tenemos las llamadas _media queries_. Estas permiten definir una serie de reglas dependiendo del tamaño de la pantalla desde donde se esté visualizando el contenido, por ejemplo:
+´´´css
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .columna {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+´´´
 

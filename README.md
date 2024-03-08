@@ -965,3 +965,90 @@ width y heigth
 - Herramientas de edición y desarrollo web
 
 Para trabajar con la web esencialmente contamos con 2 herramientas: un editor de código y un navegador. El navegador interpretará el código HTML y lo mostrará en pantalla, podemos hacer uso de cualquier navegador (es recomendable que esté actualizado y no esté descontinuado) y a su misma vez usar el editor de código que queramos ya que prácticamente todos permitirán el uso de HTML y CSS, pero es bueno comparar ya que lo que realmente va a cambiar la experiencia son las herramientas que nos dan para trabajar y las extensiones y plugins que podemos usar.
+
+## CSS
+### Qué es
+CSS es un lenguaje de marcas usado para dar estilos y una mejor presentación a las páginas web. Al igual que HTML y XML es mantenido por la W3C, y a lo largo de su existencia ha tenido distintas versiones:
+|Año|Versión|
+|---|-------|
+|1996|CSS1|
+|1998|CSS2|
+|2011|CSS2.2|
+
+### Agregar CSS a un HTML
+Existen varias maneras de agregar CSS al documento. Estas son:
+- Como un documento externo con la etiqueta ´link´
+´link rel="stylesheet" href="archivoconestilos.css"´
+
+- Como elemento style en la cabecera HTML usando la etiqueta ´<style> </style>´
+
+- como elemento en línea, usándolo como atributo: ´<p style="font-family:impact"></p>´
+
+### Sintáxis CSS
+__Selectores__
+Son las herramientas con las que vamos a seleccionar el elemento al que le vamos a dar estilo y hay varios tipos:
+- Universal: seleccionan todos los elementos
+- Tipo: selecciona por tipo de elemento, como ´h1´
+- Clase: selecciona por clases asignadas a los elementos, con un punto al principio: ´.clase´
+- Atributo: selecciona elementos que tengan un atributo en concreto
+
+También podemos hacer combinaciones y agrupaciones. Las agrupaciones sirven para aplicar el mismo estilo a varios elementos (h1,p,img por ejemplo) y las combinaciones solo se les aplicarán estilos si se cumple la combinación especificada. Aquí podemos dividirlo en:
+- Hermanos: A~B
+- Hijos: A>B
+- Hermanos adyacentes: A+B
+- Descendentes: A B
+
+Encontramos también pseudoclases y pseudoelementos. Las pseudoclases son modificadores que se añade a un selector para que solo se le aplique el estilo si está en un estado en concreto y los pseudoelementos especifican parte de un elemento, como la primera letra o la última palabra.
+Algunas pseudoclases son:
+- checked
+- disabled
+- focus
+- hover
+- visited
+
+Algunos pseudoelementos son:
+- after
+- before
+- first-letter
+- first-line
+- selection
+
+__Tipos de datos y unidades__
+En CSS podemos encontrarnos con los siguientes tipos de datos:
+- Entero: numeros enteros positivos y negativos
+- Número: número decimal
+- Porcentaje
+- Colores: pueden ser en código RGB, hexadecimal o HSL
+
+Por otro lado nos encontramos con los unidades que se dividen en:
+Absolutas
+- px: píxeles
+- cm: centímetro
+- mm: milímetro
+- Q: cuarto de miímetro
+- in: pulgada
+- pt: puntos (1/72 in)
+- pc: picas (1/16 in)
+
+Relativas:
+- em: tamaño letra del padre
+- ex: altura de la fuente del elemento
+- ch: ancho del carácter
+- rem: tamaño de la letra del elemento raíz
+- lh: altura de la línea del elemento
+- vw: 1% del ancho de la ventana
+- vh: 1& del alto de la ventana
+- vmin: 1% de la dimensión más pequeña de la ventana
+- vmax: 1% de la dimensión más grande de la ventana
+
+__Propiedades__
+CSS se basa en el modelo de cajas para dar estilo y manejar la posición de los elementos. Sus propiedades son
+- Margen exterior: espacio circundante con otros elementos. ´margin´
+- Margen Interior: espacio interior vacío que se agrega al elemento. ´padding´
+- Borde: delineado exterior del elemento. ´border´
+- Contorno: Se dibuja encima del elemento sin ocupar espacio. ´outline´
+- Ancho: ´width´
+- Alto: ´heigth´
+
+Dentro de la propiedad Display podemos encontrar el valor ´flex´ el cual permite crear elementos flexibles y fluyentes
+

@@ -977,19 +977,19 @@ CSS es un lenguaje de marcas usado para dar estilos y una mejor presentación a 
 
 ### Agregar CSS a un HTML
 Existen varias maneras de agregar CSS al documento. Estas son:
-- Como un documento externo con la etiqueta ´link´
-´link rel="stylesheet" href="archivoconestilos.css"´
+- Como un documento externo con la etiqueta `link`
+`link rel="stylesheet" href="archivoconestilos.css"`
 
-- Como elemento style en la cabecera HTML usando la etiqueta ´<style> </style>´
+- Como elemento style en la cabecera HTML usando la etiqueta `<style> </style>`
 
-- como elemento en línea, usándolo como atributo: ´<p style="font-family:impact"></p>´
+- como elemento en línea, usándolo como atributo: `<p style="font-family:impact"></p>`
 
 ### Sintáxis CSS
 __Selectores__
 Son las herramientas con las que vamos a seleccionar el elemento al que le vamos a dar estilo y hay varios tipos:
 - Universal: seleccionan todos los elementos
-- Tipo: selecciona por tipo de elemento, como ´h1´
-- Clase: selecciona por clases asignadas a los elementos, con un punto al principio: ´.clase´
+- Tipo: selecciona por tipo de elemento, como h1
+- Clase: selecciona por clases asignadas a los elementos, con un punto al principio: `.clase`
 - Atributo: selecciona elementos que tengan un atributo en concreto
 
 También podemos hacer combinaciones y agrupaciones. Las agrupaciones sirven para aplicar el mismo estilo a varios elementos (h1,p,img por ejemplo) y las combinaciones solo se les aplicarán estilos si se cumple la combinación especificada. Aquí podemos dividirlo en:
@@ -1043,14 +1043,14 @@ Relativas:
 
 __Propiedades__
 CSS se basa en el modelo de cajas para dar estilo y manejar la posición de los elementos. Sus propiedades son
-- Margen exterior: espacio circundante con otros elementos. ´margin´
-- Margen Interior: espacio interior vacío que se agrega al elemento. ´padding´
-- Borde: delineado exterior del elemento. ´border´
-- Contorno: Se dibuja encima del elemento sin ocupar espacio. ´outline´
-- Ancho: ´width´
-- Alto: ´heigth´
+- Margen exterior: espacio circundante con otros elementos. `margin`
+- Margen Interior: espacio interior vacío que se agrega al elemento. `padding`
+- Borde: delineado exterior del elemento. `border`
+- Contorno: Se dibuja encima del elemento sin ocupar espacio. `outline`
+- Ancho: `width`
+- Alto: `heigth`
 
-Dentro de la propiedad Display podemos encontrar el valor ´flex´ el cual permite crear elementos flexibles y fluyentes en el documento usando el modelo flexbox. La dirección en la que fluye se establece con ´flex-direction´. También nos encontramos con el elemento grid, el cualb nos permitirá crear una tabla o cuadrícula usando menos código y con muchas más opciones. Con ´grid-template-columns´ definiremos la cuadrícula y sus dimensiones.
+Dentro de la propiedad Display podemos encontrar el valor `flex` el cual permite crear elementos flexibles y fluyentes en el documento usando el modelo flexbox. La dirección en la que fluye se establece con `flex-direction`. También nos encontramos con el elemento grid, el cualb nos permitirá crear una tabla o cuadrícula usando menos código y con muchas más opciones. Con `grid-template-columns` definiremos la cuadrícula y sus dimensiones.
 
 Para controlar la posicion del elemento, podemos usar las propiedades float y position.
 Float tiene los siguientes valores
@@ -1078,7 +1078,7 @@ También a las listas se les puede agregar ciertas propiedades:
 - list-style-type: indica el tipo de viñeta a utilizar mediante los valores disc,
 circle, square, decimal, lower-roman, upper-roman,
 lower-greek, lower-latin, lower-latin y none
-- list-style-position: posición de las viñetas ´inside´ u ´outside´
+- list-style-position: posición de las viñetas `inside` u `outside`
 - list-style-image: establece que la viñeta sea una imágen usando una ruta o URL
 
 No sabemos en qué tipo de dispositivo se visualizará el contenido, puede ser un ordenador, una tablet, un móvil o un Frigorífico Samsung Side by Side Family Hub Inox RS6HA8880S9, por lo que el tamaño de la pantalla puede variar. Para eso tenemos las llamadas _media queries_. Estas permiten definir una serie de reglas dependiendo del tamaño de la pantalla desde donde se esté visualizando el contenido, por ejemplo:

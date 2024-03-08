@@ -1082,7 +1082,7 @@ lower-greek, lower-latin, lower-latin y none
 - list-style-image: establece que la viñeta sea una imágen usando una ruta o URL
 
 No sabemos en qué tipo de dispositivo se visualizará el contenido, puede ser un ordenador, una tablet, un móvil o un Frigorífico Samsung Side by Side Family Hub Inox RS6HA8880S9, por lo que el tamaño de la pantalla puede variar. Para eso tenemos las llamadas _media queries_. Estas permiten definir una serie de reglas dependiendo del tamaño de la pantalla desde donde se esté visualizando el contenido, por ejemplo:
-´´´css
+```css
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
@@ -1093,5 +1093,5 @@ No sabemos en qué tipo de dispositivo se visualizará el contenido, puede ser u
         margin-bottom: 10px;
     }
 }
-´´´
+```
 

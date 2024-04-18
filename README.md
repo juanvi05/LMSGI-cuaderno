@@ -1152,3 +1152,75 @@ __Ejemplo__
 </rss>
 ```
 
+### Atom
+__Sintáxis__
+El elemento raíz es `<feed>` el cual contiene el espacio de nombres `xmlns=http://www.w3.org/2005/Atom` y los siguientes elementos:
+
+- id: identificador del canal mediante una URI
+- title: título del canal
+- updated: fecha de la última actualización
+- author: indica el autor junto a la etiqueta `<name>` y las etiquetas opcionales `<email>` y `<uri>`
+- link: enlace al canal mediante `href`
+
+Opcionalmente puede contener los siguientes elementos
+
+- category: categoría(s) del canal
+- generator: programa que ha generado el feed
+- rights: acerca de derechos de autor
+- subtitle: disposición final
+
+Dentro del feed, las entradas se definen con el elemento `<entry>` el cual tiene los siguientes elementos
+
+- id
+- title
+- updated
+- content: descripción del contenido
+- author
+- link
+- sunmmary: resumen de la entrada
+- category
+- contributor: colaborador de la entrada con `<name>` y opcionalmente `<email>` y `<uri>`
+- published: fecha de publicación
+- rights
+
+__Ejemplo__
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <author>
+        <name>Juan Vicente Carrilero Requena</name>
+      </author>
+
+  <title>Noticias de Salud y Bienestar</title>
+  <link href="http://ejemplo.com" rel="self"/>
+  <link href="http://ejemplo.com"/>
+
+  <updated>2024-04-17T12:00:00Z</updated>
+
+  <entry>
+    <title>Nuevas ofertas para matricularse en un gimnasio</title>
+    <link href="http://ejemplo.com/ofertas-gimnasio"/>
+    <id>urn:uuid:12345678-1234-5678-1234-567812345679</id>
+    <updated>2024-04-16T08:00:00Z</updated>
+    <summary>Descubre las últimas ofertas para matricularte en un gimnasio y ponerte en forma.</summary>
+  </entry>
+
+  <entry>
+    <title>Consejos para llevar una alimentación sana</title>
+    <link href="http://ejemplo.com/alimentacion-sana"/>
+    <id>urn:uuid:12345678-1234-5678-1234-567812345680</id>
+    <updated>2024-04-15T10:00:00Z</updated>
+    <summary>Lee este artículo que te ofrece consejos prácticos para llevar una alimentación sana y equilibrada.</summary>
+  </entry>
+
+  <entry>
+    <title>Ejercicios y deportes para mejorar la circulación</title>
+    <link href="http://ejemplo.com/mejorar-circulacion"/>
+    <id>urn:uuid:12345678-1234-5678-1234-567812345681</id>
+    <updated>2024-04-14T12:00:00Z</updated>
+    <summary>Descubre qué ejercicios y deportes puedes practicar para mejorar tu circulación sanguínea y mantener una buena salud cardiovascular.</summary>
+  </entry>
+  
+</feed>
+```

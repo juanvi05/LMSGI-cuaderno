@@ -1224,3 +1224,24 @@ __Ejemplo__
   
 </feed>
 ```
+### Herramientas de validación de canales de sindicación
+Existen validadores para comprobar si el el canal está sintácticamente correcto. Atom y RSS son mantenidos por la W3C, la cual cuenta con su propio validador:
+https://validator.w3.org/feed/#validate_by_input
+
+### Añadir canales de sindicación a una web
+Existen principalmente 2 maneras. La primera es mediante la etiqueta `<a>` como enlace al fichero y la segunda es mediante la etiqueta `<link>` en el `<head>`, dando contenido semántico a la página, de la siguiente manera:
+
+```html
+    <link rel="alternate" href=".\Actividad 2.atom" type="application/atom+xml" title="Atom">
+    <link rel="alternate" href=".\Actividad 1.rss" type="application/rss+xml" title="RSS">
+```
+
+### Agregadores de canales
+Existen aplicaciones y webs que nos permiten suscribirnos a estos canales de sindicacion tales como
+NewsFox (local) o Feedly (online)
+
+### Canales de sindicación
+Unos ejemplos de canales de sindicación son:
+- Xataka: https://www.xataka.com/index.xml
+- Marca: https://www.marca.com/rss.html
+- DGT: https://revista.dgt.es/es/rss/

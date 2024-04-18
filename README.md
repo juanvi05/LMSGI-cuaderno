@@ -1095,3 +1095,60 @@ No sabemos en qué tipo de dispositivo se visualizará el contenido, puede ser u
 }
 ```
 
+## Sindicación de contenido
+La sindicación web proporciona al usuario una tipo de suscripción a una página página web, haciendo mucho más comodo el acceso a nueva información, ya que el usuario no tiene que buscarla, si no que llega a él. Existen varios formatos basados en XML como RSS o Atom.
+
+### RSS
+__Sintáxis__
+Como elemento raíz encontraremos siempre la etiquera `<rss>` junto al atributo `version` con el valor `2.0`. Después nos encontraremos con el subelemento `<channel>` por cada canal de suscripción que tenga la web. Dentro de este elemento, tendremos los siguientes elementos obligatorios:
+
+- title: título del canal
+- link: enlace a la página
+- description: descripción corta del contenido
+- language: idioma en el que se encuentra el contenido
+- copiright: relacionado con derechos de autor
+- category: categoría(s) a las que pertenece el canal
+- generator: programa que ha generado el canal
+
+Las entradas se definen con el elemento `<item>` el cual contiene los siguientes elementos:
+
+- title
+- link
+- description
+- pubDate: fecha de publicación (formato RFC-822)
+- comments: URL con los comentarios de la entrada
+- author: email del autor
+
+__Ejemplo__
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+    <title>Tecnologik</title>
+    <link>http://tecnologik.com</link>
+    <description>Últimas noticias sobre tecnología, IA y dispositivos móviles</description>
+
+    <item>
+      <title>Nuevas ofertas sobre tecnología</title>
+      <link>http://ejemplo.com/ofertas</link>
+      <description>Descubre las últimas ofertas en tecnología que no te puedes perder.</description>
+    </item>
+
+    <item>
+      <title>El impacto de la inteligencia artificial en la sociedad</title>
+      <link>http://ejemplo.com/ia</link>
+      <description>Lee este artículo que explora el uso creciente de la inteligencia artificial y su impacto en diversos ámbitos de la sociedad.</description>
+    </item>
+
+    <item>
+      <title>El futuro de los dispositivos móviles</title>
+      <link>http://ejemplo.com/dispositivos-moviles</link>
+      <description>Descubre cómo están evolucionando los dispositivos móviles y qué nos depara el futuro en este campo.</description>
+    </item>
+    
+  </channel>
+
+</rss>
+```
+

@@ -1250,12 +1250,15 @@ Unos ejemplos de canales de sindicación son:
 ## Almacenamiento usando lenguajes de marcas
 ### Introducción a Python
 __Definición de Python__
+
 Se trata de un lenguaje de programación que permite realizar programas para varias plataformas (pc, móvil...)
 
 __Variables__
+
 Es un nombre que hace referencia a un valor almacenado en memoria, por ejemplo `x=5`. Aquí declaramos que la variable x contiene el valor 5.
 
 __Tipos de datos__
+
 Encontramos diferentes tipos de datos en python, entre ellos:
 - int: números enteros, sin decimales (1, 2, 10, -4...)
 - float: números con parte decimal (3.2, 4.6...)
@@ -1263,6 +1266,7 @@ Encontramos diferentes tipos de datos en python, entre ellos:
 - bool: booleanos (true o false)
 
 __Estructuras de control__
+
 - Control condicional
 En estas contamos con una condición, y dependiendo de cómo lo configuremos, se realizará o una acción u otra. En python debemos indicar cuando empieza un bloque nuevo, esto lo haremos con tabulaciones.
 Las instrucciones de control condicional son 3:
@@ -1292,19 +1296,24 @@ for i in range(1,10):
 ```
 
 __Listas__
+
 Son colecciones ordenadas de elementos. Gracias a las listas, si queremos guardar una serie de valores, no hace falta crear una variable para cada valor, si no que los almacenamos en una lista, de esta manera como esta `[1, 2, 3, 4]`. Se crean con corchetes.
 
 __Tuplas__
+
 Parecidas a las listas, pero con la diferencia de que son inmutables, es decir, que no pueden ser modificadas. Estas se crean entre paréntesis: `(1, 2, 3)`
 
 ### JSON
 __Introducción__
+
 JSON inicialmente era solo parte de la representación de datos en JavaScript pero con el paso del tiempo la comunidad ha extendido su uso a otros ámbitos y ahora es considerado un lenguaje de marcas independiente
 
 __Elementos__ 
+
 JSON se basa en elementos con par clave:valor, separadas por comas y creando objetos entre corchetes { }, inicio y fin de objeto respectivamente. Cada elemento puede tener 1 valor simple, lista u objeto. Los valores simples son objetos de un único valor, una lista es uno o varios objetos definidos entre las etiquetas [ ] y los objetos que ya hemos indicado cómo se definen.
 
 __Tipos de datos simples__
+
 Entre los tipos que pueden ser los valores simples se dan:
 - Numéricos: núemeros enteros o decimales separados por un punto `"cantidad":2"`
 - Cadenas: cadenas de texto (caracteres) definidas con comillas dobles `"nombre":"Juan Vicente"`
@@ -1312,6 +1321,7 @@ Entre los tipos que pueden ser los valores simples se dan:
 - Null: valor nulo/vacío `"tercerapellido":null"`
 
 __Listas (arrays)__
+
 Es un conjunto de elementos con una posición o índice, definidos entre los elementos [ ], cada elemento separado por comas:
 ```json
 {
@@ -1320,6 +1330,7 @@ Es un conjunto de elementos con una posición o índice, definidos entre los ele
 ```
 
 __Objetos__
+
 Es un elemento que contiene subelementos, algo así como un elemento compuesto, definido entre corchetes { }
 ```json
 {
@@ -1333,9 +1344,11 @@ Es un elemento que contiene subelementos, algo así como un elemento compuesto, 
 
 ### MongoDB
 __Definición del motor de base de datos__
+
 Se trata de una base de datos NoSQL de código abierto basada en documentos, lo que quiere decir que en vez de usar tablas con filas y columnas como las bases de datos relacionales, usa documentos BSON (forma binaria de JSON) lo cual permite mayor flexibilidad y escalabilidad
 
 __Instalación y configuración con Docker__
+
 Para instalar MongoDB en docker existe una imagen para poder crear una instancia de manera sencilla si no queremso usar Docker Compose:
 ```
 docker run --name mongodb -p 27017:27017 -d
@@ -1343,6 +1356,7 @@ mongodb/mongodb-community-server:latest
 ```
 
 __Pymongo__
+
 Es un paquete para python que permite que se conecte a una base de datos MongoDB. Para instalarlo, se usa el gestor de paquetes pip `pip install pymongo`
 ```python
 import pymongo

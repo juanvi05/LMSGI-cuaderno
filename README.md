@@ -1360,3 +1360,37 @@ Con esto nos conectamos a una instancia local obteniendo tanto la base de datos 
 
 - Insertar
 
+Para insertar en una colección podemos usar la función `insert_one ()` si queremos insertar un único diccionario o JSON o si queremos insertar una colección en JSON o diccionarios usaremos `insert_many ()`
+
+- Consulta
+
+Para obtener todos los objetos de una colección mediante la función `find ()` que devolverá un cursor que recorreremos con `for`:
+```python
+result = mycol.find()
+for n in result:
+ print(n)
+```
+Alternativamente puede usarse un diccionario o documento JSON como consulta:
+```python
+query = { “address”: “fake street, 123”}
+result = mycol.find(query)
+for n in result:
+ print(n)
+```
+
+- Borrar
+
+Para borrar usaremos la función `delete_one` o `delete_many` si queremos borrar varios elementos
+```python
+mycol.delete_many({})
+```
+
+- Modificar
+
+Para modificar, de la misma manera, usaremos la función `update_one`
+```python
+query = { “address”: “fake street, 123”}
+mycol.update_one(query, newvalues)
+```
+
+<3

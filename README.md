@@ -1245,3 +1245,118 @@ Unos ejemplos de canales de sindicación son:
 - Xataka: https://www.xataka.com/index.xml
 - Marca: https://www.marca.com/rss.html
 - DGT: https://revista.dgt.es/es/rss/
+
+
+## Almacenamiento usando lenguajes de marcas
+### Introducción a Python
+__Definición de Python__
+Se trata de un lenguaje de programación que permite realizar programas para varias plataformas (pc, móvil...)
+
+__Variables__
+Es un nombre que hace referencia a un valor almacenado en memoria, por ejemplo `x=5`. Aquí declaramos que la variable x contiene el valor 5.
+
+__Tipos de datos__
+Encontramos diferentes tipos de datos en python, entre ellos:
+- int: números enteros, sin decimales (1, 2, 10, -4...)
+- float: números con parte decimal (3.2, 4.6...)
+- str: cadenas de texto, se definen usando comillas
+- bool: booleanos (true o false)
+
+__Estructuras de control__
+- Control condicional
+En estas contamos con una condición, y dependiendo de cómo lo configuremos, se realizará o una acción u otra. En python debemos indicar cuando empieza un bloque nuevo, esto lo haremos con tabulaciones.
+Las instrucciones de control condicional son 3:
+if: comprueba si se cumple una condición y realiza las acciones que se le hayan sido dadas
+if-else: comprueba si se cumple una condición y realiza unas acciones u otras
+if-elif-else: comprueba una serie de condicioes y realiza las acciones que contemplen dichas condiciones
+```python
+if a == 1:
+    a=a+1
+elif a==1:
+    a=a+2
+else:
+    a=a-1
+```
+
+- Instrucciones de control repetitivo
+Se tratan de instrucciones que haran que se repitan acciones mediante condiciones. Principalmente tenemos 2:
+while: permite ralizar un bucle mientras se cumpla una condición
+```python
+while a>1:
+    a=a-1
+```
+for: permite realizar un bucle a partir de un contador o mientras se recorre una lista
+```python
+for i in range(1,10):
+    a=a+i
+```
+
+__Listas__
+Son colecciones ordenadas de elementos. Gracias a las listas, si queremos guardar una serie de valores, no hace falta crear una variable para cada valor, si no que los almacenamos en una lista, de esta manera como esta `[1, 2, 3, 4]`. Se crean con corchetes.
+
+__Tuplas__
+Parecidas a las listas, pero con la diferencia de que son inmutables, es decir, que no pueden ser modificadas. Estas se crean entre paréntesis: `(1, 2, 3)`
+
+### JSON
+__Introducción__
+JSON inicialmente era solo parte de la representación de datos en JavaScript pero con el paso del tiempo la comunidad ha extendido su uso a otros ámbitos y ahora es considerado un lenguaje de marcas independiente
+
+__Elementos__ 
+JSON se basa en elementos con par clave:valor, separadas por comas y creando objetos entre corchetes { }, inicio y fin de objeto respectivamente. Cada elemento puede tener 1 valor simple, lista u objeto. Los valores simples son objetos de un único valor, una lista es uno o varios objetos definidos entre las etiquetas [ ] y los objetos que ya hemos indicado cómo se definen.
+
+__Tipos de datos simples__
+Entre los tipos que pueden ser los valores simples se dan:
+- Numéricos: núemeros enteros o decimales separados por un punto `"cantidad":2"`
+- Cadenas: cadenas de texto (caracteres) definidas con comillas dobles `"nombre":"Juan Vicente"`
+- Booleanos: true o false `"vivo":true"
+- Null: valor nulo/vacío `"tercerapellido":null"`
+
+__Listas (arrays)__
+Es un conjunto de elementos con una posición o índice, definidos entre los elementos [ ], cada elemento separado por comas:
+```json
+{
+  "nombres": ["Juan", "María", "Pedro", "Ana"]
+}
+```
+
+__Objetos__
+Es un elemento que contiene subelementos, algo así como un elemento compuesto, definido entre corchetes { }
+```json
+{
+  "persona": {
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid"
+  }
+}
+```
+
+### MongoDB
+__Definición del motor de base de datos__
+Se trata de una base de datos NoSQL de código abierto basada en documentos, lo que quiere decir que en vez de usar tablas con filas y columnas como las bases de datos relacionales, usa documentos BSON (forma binaria de JSON) lo cual permite mayor flexibilidad y escalabilidad
+
+__Instalación y configuración con Docker__
+Para instalar MongoDB en docker existe una imagen para poder crear una instancia de manera sencilla si no queremso usar Docker Compose:
+```
+docker run --name mongodb -p 27017:27017 -d
+mongodb/mongodb-community-server:latest
+```
+
+__Pymongo__
+Es un paquete para python que permite que se conecte a una base de datos MongoDB. Para instalarlo, se usa el gestor de paquetes pip `pip install pymongo`
+```python
+import pymongo
+import json
+
+#Conectar a la instancia
+myclient = pymongo.MongoClient("mongodb://asir_lmsgi:asir_1234@localhost:27017/")
+
+#seleccionar o crear una nueva base de datos
+mydb = myclient["asirdb1"]
+#seleccionar o crear una colección
+mycol = mydb["packages"]
+```
+Con esto nos conectamos a una instancia local obteniendo tanto la base de datos como una colección.
+
+- Insertar
+
